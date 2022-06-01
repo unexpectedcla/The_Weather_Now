@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+body {
+    background-color: #f5d6d3;
+    font-family: Helvetica, Verdana, sans-serif;
+    color: #48484A;
+    background-image: url(images/bg_pink.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 650px;
+    height: 100vh;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+}
+
+/*----------DIV DA TEMPERATURA ATUAL----------*/
+
+#container {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 5px 6px 75px rgba(0, 0, 0, 0.25);
+    background: rgba(255,255,255, 0.5);
+    border-radius: 20px;
+}
+
+#local {
+    font-size: 22px;
+    padding: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+
+#hoje{
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+#hora{
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+}
+
+#temperatura {
+    font-size: 48px;
+    font-weight: 400;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#tempo {
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+#minmax {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#botao{
+    text-align: right;
+    padding-right: 10px;
+}
+
+#botao img {
+    width: 20px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/*----------HISTÓRICO----------*/
+
+#output {
+    height: 410px;
+    padding: 10px;
+    overflow-y: auto;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+
+.historico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 5px 6px 75px rgba(0, 0, 0, 0.25);
+    background: rgba(255,255,255, 0.5);
+    border-radius: 20px;
+}
+
+
+#output::-webkit-scrollbar {
+    display: none;
+}
+
+
+.historico .data {
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.historico .temp {
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 300;
+
+}
+
+.historico img {
+    width: 50px;
+    height: 50px;
+}
+
+
+/*----------RESPONSIVIDADE----------*/
+
+
+@media (max-width: 639px){
+
+    #output {
+        height: auto;
+        overflow-y: visible;
+    }
+
+}
